@@ -1,13 +1,17 @@
 {
   "compilerOptions": {
-    "types": ["react", "react-router"],
+    "types": ["react", "react-router", "redux"],
     "target": "ES6",
     "module": "es2015",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "lib": ["es6", "es2017", "es2018", "es2019", "es2020", "dom", "webworker"],
     "esModuleInterop": true,
     "jsx": "react",
     "removeComments": true,
     "strict": false,
     "outDir": "./build",
+    "baseUrl": "./",
     "rootDir": "./"
   },
   "exclude": ["assets", "build", "dist", "node_modules"]
