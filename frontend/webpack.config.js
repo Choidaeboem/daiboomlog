@@ -17,8 +17,17 @@ module.exports = {
         use: 'babel-loader',
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        test: /\.(css|scss)$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: require.resolve('sass-loader'),
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
       },
       {
         test: /\.(png|j?g|svg|gif)?$/,
