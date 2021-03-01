@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "types": ["react", "react-router"],
+    "target": "ES6",
+    "module": "es2015",
+    "esModuleInterop": true,
+    "jsx": "react",
+    "removeComments": true,
+    "strict": false,
+    "outDir": "./build",
+    "rootDir": "./"
+  },
+  "exclude": ["assets", "build", "dist", "node_modules"]
+}
