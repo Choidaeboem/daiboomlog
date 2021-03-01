@@ -1,0 +1,4 @@
+# Directories
+frontend/node_modules
+frontend/build
+frontend/.cache
