@@ -8,7 +8,8 @@
     "removeComments": true,
     "strict": false,
     "outDir": "./build",
-    "rootDir": "./"
+    "rootDir": "./",
+    "moduleResolution": "node"
   },
   "exclude": ["assets", "build", "dist", "node_modules"]
 }

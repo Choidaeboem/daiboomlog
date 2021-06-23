@@ -19,7 +19,12 @@
         }
       }
     ],
-    "@babel/preset-react"
+    "@babel/preset-react",
+    "env",
+    "react"
   ],
-  "plugins": ["@babel/plugin-proposal-class-properties"]
+  "plugins": [
+    "transform-class-properties",
+    "@babel/plugin-proposal-class-properties"
+  ]
 }

@@ -13,23 +13,29 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.js$/,
+        test: /\.js|\.jsx$/,
         use: 'babel-loader',
+        exclude: /node_modules/,
       },
       {
-        test: /\.css$/,
+        test: /\.(css)$/,
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|j?g|svg|gif)?$/,
-        use: 'file-loader',
+        test: /\.(s(a|c)ss)$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(ttf|eot|woff|woff2|png|j?g|svg|gif)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        use: [{loader: 'file-loader'}],
       },
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js', '.scss'],
   },
   devServer: {
+    hot: true,
     historyApiFallback: true,
     contentBase: path.join(__dirname, 'build'),
     compress: true,
